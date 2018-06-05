@@ -6,35 +6,69 @@
 
 
 html, body {
-    min-height: 100%;
+    height: 100vh;
     width: 100%;
+
+}
+
+body {
+    background-color: rgba(135, 206, 235, 0.21);
+    font-size: 16px;
+    font-family: Calibri, sans-serif;
 }
 
 .wrapper {
-    border: 2px solid skyblue;
+    min-height: 100%;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 2fr 1fr 10fr 1fr;
+
+    grid-template-areas:
+            "header header"
+            "nav nav"
+            "aside section"
+            "footer footer";
+}
+
+@media (max-width: 550px) {
+
+    .wrapper {
+        grid-column-gap: 2em;
+        grid-row-gap: 20px;
+        grid-template-columns: 2fr 4fr;
+    }
 }
 
 header {
     border: 2px solid #eb272e;
-
+    grid-area: header;
 }
 
 nav {
     border: 2px solid #66eb48;
-
+    grid-area: nav;
 }
 
 aside {
     border: 2px solid #1d1d1d;
-
+    grid-area: aside;
 }
 
 section {
     border: 2px solid #ebad00;
+    grid-area: section;
+}
 
+article {
+    border: 2px solid #0b49eb;
 }
 
 footer {
     border: 2px solid #9846eb;
-
+    grid-area: footer;
 }
