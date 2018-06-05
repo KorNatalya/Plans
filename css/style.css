@@ -5,7 +5,36 @@
 }
 
 
-html {
+html, body {
     min-height: 100%;
     width: 100%;
+}
+
+.wrapper {
+    border: 2px solid skyblue;
+}
+
+header {
+    border: 2px solid #eb272e;
+
+}
+
+nav {
+    border: 2px solid #66eb48;
+
+}
+
+aside {
+    border: 2px solid #1d1d1d;
+
+}
+
+section {
+    border: 2px solid #ebad00;
+
+}
+
+footer {
+    border: 2px solid #9846eb;
+
 }
